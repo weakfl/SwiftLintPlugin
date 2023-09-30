@@ -98,7 +98,8 @@ private extension Command {
             displayName: "SwiftLint BuildTool Plugin",
             executable: try context.tool(named: "swiftlint").path,
             arguments: [
-                "--config", "\(configuration)"
+                "--config", "\(configuration)",
+                "--cache-path", "\(context.pluginWorkDirectory)"
             ],
             environment: [
                 "PROJECT_DIR": context.package.directory,
@@ -116,7 +117,8 @@ private extension Command {
             displayName: "SwiftLint BuildTool Plugin",
             executable: try context.tool(named: "swiftlint").path,
             arguments: [
-                "--config", "\(configuration)"
+                "--config", "\(configuration)",
+                "--cache-path", "\(context.pluginWorkDirectory)"
             ],
             environment: [
                 "PROJECT_DIR": context.xcodeProject.directory,
