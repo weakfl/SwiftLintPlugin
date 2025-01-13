@@ -99,7 +99,8 @@ private extension Command {
             executable: try context.tool(named: "swiftlint").path,
             arguments: [
                 "--config", "\(configuration)",
-                "--cache-path", "\(context.pluginWorkDirectory)"
+                "--cache-path", "\(context.pluginWorkDirectory)",
+                "--use-alternative-excluding"
             ],
             environment: [
                 "PROJECT_DIR": context.package.directory,
@@ -118,7 +119,8 @@ private extension Command {
             executable: try context.tool(named: "swiftlint").path,
             arguments: [
                 "--config", "\(configuration)",
-                "--cache-path", "\(context.pluginWorkDirectory)"
+                "--cache-path", "\(context.pluginWorkDirectory)",
+                "--use-alternative-excluding"
             ],
             environment: [
                 "PROJECT_DIR": context.xcodeProject.directory,
