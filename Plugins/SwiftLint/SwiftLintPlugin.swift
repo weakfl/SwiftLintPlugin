@@ -22,7 +22,7 @@ struct SwiftLintPlugin: CommandPlugin {
         for target in targetsToProcess {
             guard let target = target as? SourceModuleTarget else { continue }
 
-            try formatCode(in: target.directory, context: context, arguments: argExtractor.remainingArguments)
+            try lintCode(in: target.directory, context: context, arguments: argExtractor.remainingArguments)
         }
     }
 }
