@@ -6,7 +6,7 @@ Swift Package Manager plugins for [SwiftLint](https://github.com/realm/SwiftLint
 
 - **Fast builds**: SwiftLint ships as a prebuilt binary, so neither SwiftLint nor SwiftSyntax gets compiled from source.
 - **One config for the whole project**: the build tool plugin lints the entire directory with the `.swiftlint.yml` at its root — other targets, loose files and local packages that live inside it included. The official [SwiftLintPlugins](https://github.com/SimplyDanny/SwiftLintPlugins) only lint the files of the target the plugin is attached to, and only look for configs within that target's package.
-- **Always current**: a [daily workflow](.github/workflows/update.yml) picks up new SwiftLint releases. Each version is tagged `vX.Y.Z` and matches the [SwiftLint release](https://github.com/realm/SwiftLint/releases) of the same number.
+- **Always current**: an [hourly workflow](.github/workflows/update.yml) picks up new SwiftLint releases. Each version is tagged `vX.Y.Z` and matches the [SwiftLint release](https://github.com/realm/SwiftLint/releases) of the same number.
 
 ## Installation
 
